@@ -22,23 +22,23 @@ Search google "bypass __wakeup in php" ta sẽ có được một vài resources
 
 Dựa vào response từ server, ta biết được server chạy php version 7.4.5
 
-![1.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/2.png)
+>![1.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/2.png)
 
 Sau một hồi focus vào [issues](https://github.com/php/php-src/issues/9618) này không thành công thì mình bắt đầu thử một [bug](https://bugs.php.net/bug.php?id=81151) từ năm 2021
 
 Và có vẻ như mình đã đi đúng hướng :)
 
-![3.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/3.png)
+>![3.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/3.png)
 
 ### **2. Replace dot**
 
-![4.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/4.png)
+>![4.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/4.png)
 
 Để ý rằng ta không để truyền được giá trị cho $_GET[sekai_game.run] bởi [*tính năng*](https://www.php.net/manual/en/language.variables.external.php#language.variables.external.dot-in-names) của PHP.
 
 Nom na thì khi ta gửi request ```/?sekai_game.run=test``` thì PHP sẽ hiểu thành ```$_GET[sekai_game_run]=test```. 
 
-![5.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/5.png)
+>![5.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/5.png)
 
 Tương tự ```sekai.game run``` đều sẽ thành ```sekai_game_run```
 
@@ -52,4 +52,4 @@ http://sekai-game-start.ctf.sekai.team/?sekai[game.run=C:10:%22Sekai_Game%22:0:{
 
 
 
-![6.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/6.png)
+>![6.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/6.png)
