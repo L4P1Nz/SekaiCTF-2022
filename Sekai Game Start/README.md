@@ -53,3 +53,11 @@ http://sekai-game-start.ctf.sekai.team/?sekai[game.run=C:10:%22Sekai_Game%22:0:{
 
 
 >![6.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/6.png)
+
+
+
+### **UPDATE: **
+
+Từ write up của bạn @^To : ta có thể check [source](https://github.com/php/php-src/blob/master/main/php_variables.c) php để giải thích tại sao khi repalce "```[```" thì php sẽ ignore các ký tự còn lại.
+
+>![7.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/7.png)
