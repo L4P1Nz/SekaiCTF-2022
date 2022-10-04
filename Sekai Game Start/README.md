@@ -6,7 +6,7 @@ Hey it's our Sekai Game – try to make it start!!
 
 Author: bwjy
 
-```http
+```
 http://sekai-game-start.ctf.sekai.team
 ```
 ___
@@ -16,7 +16,7 @@ ___
 
 Bài này có 2 vấn đề mà ta phải giải quyết
 
-1. Exploit unserialize in php
+### **1. Exploit unserialize in php**
 
 Search google "bypass __wakeup in php" ta sẽ có được một vài resources để exploit
 
@@ -30,7 +30,7 @@ Và có vẻ như mình đã đi đúng hướng :)
 
 ![3.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/3.png)
 
-2. Replace dot
+### **2. Replace dot**
 
 ![4.png](https://github.com/L4P1Nz/SekaiCTF-2022/blob/main/Media/4.png)
 
